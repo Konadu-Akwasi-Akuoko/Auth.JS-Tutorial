@@ -32,11 +32,11 @@ export default function Card({ user, pagetype }: Props) {
     </div>
   ) : null;
 
-  // const emailDisplay = user?.email ? (
-  //     <div className="flex flex-col items-center p-6 bg-white rounded-lg font-bold text-5xl text-black">
-  //         {user?.email}
-  //     </div>
-  // ) : null
+  const emailDisplay = user?.email ? (
+    <div className="flex flex-col items-center p-6 bg-white rounded-lg font-bold text-5xl text-black">
+      {user?.email}
+    </div>
+  ) : null;
 
   const userImage = user?.image ? (
     <Image
@@ -54,7 +54,7 @@ export default function Card({ user, pagetype }: Props) {
       {/* Render the greeting element, which may be null if there is no user name */}
       {greeting}
       {/* Render the emailDisplay element, which may be null if there is no user email */}
-      {/* {emailDisplay} */}
+      {emailDisplay}
       {/* Render the userImage element, which may be null if there is no user image
        */}
       {userImage}
